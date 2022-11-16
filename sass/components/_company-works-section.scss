@@ -1,0 +1,38 @@
+.company-works__title {
+    @extend %section-title;
+}
+
+.company-works {
+    padding-top: 0;
+}
+
+.company-works-list {
+    display: flex;
+}
+
+.company-works-list .company-works__item+.company-works__item {
+    margin-left: 30px;
+}
+
+.company-works__content {
+    position: relative;
+}
+
+.company-works__description {
+    min-width: 100%;
+    min-height: 70px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(47, 48, 58, 0.8);
+}
+
+.company-works__work-title {
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    text-align: center;
+    text-transform: uppercase;
+    color: $global-white-color;
+}

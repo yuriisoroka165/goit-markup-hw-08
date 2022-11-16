@@ -1,0 +1,25 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 80px;
+    font-family: $body-font-family-roboto;
+    font-size: $body-font-size;
+    letter-spacing: $body-letter-spacing;
+    color: $global-blackgray-color;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
