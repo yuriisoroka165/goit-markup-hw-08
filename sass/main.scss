@@ -1,5 +1,6 @@
 @import './utils/variables';
 @import './utils/placeholders';
+@import './utils/breakpoints';
 @import './components/tags-style';
 @import './components/global-classes_style';
 @import './components/site-header';
@@ -11,3 +12,4 @@
 @import './components/clients-section';
 @import './components/projects-section';
 @import './components/site-footer';
+@import './components/mobile-menu';
