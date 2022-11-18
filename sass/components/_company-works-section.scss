@@ -4,6 +4,12 @@
 
 .company-works {
     padding-top: 0;
+
+    @media screen and (max-width: $desktop-breakpoint) {
+        & {
+            display: none;
+        }
+    }
 }
 
 .company-works-list {

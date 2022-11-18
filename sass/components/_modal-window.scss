@@ -6,12 +6,15 @@
     /* і розтягуємо на вюпорт */
     width: 100%;
     height: 100%;
+    padding: 94px 15px;
     background-color: $modal-window-backdrop-color;
     /* css перехід */
     transition-property: opacity;
     transition-duration: $global-transition-duration;
     transition-timing-function: $global-transition-timing-function;
     z-index: 3;
+    // прокрутка модального вікна
+    overflow-y: scroll;
 }
 
 .modal-window-backdrop.is-hidden {
@@ -26,19 +29,31 @@
 }
 
 .modal-window {
-    /* центрування відносно початку вікна верхній лівий кут */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    /* padding: 8px; */
-    transform: translate(-50%, -50%) scale(1);
-    min-width: 528px;
-    min-height: 581px;
     border-radius: 4px;
     background-color: $global-white-color;
     transition-property: transform;
     transition-duration: $global-transition-duration;
     transition-timing-function: $global-transition-timing-function;
+
+    @media screen and (min-width: $mobile-breakpoint) {
+        & {
+            /* центрування відносно початку вікна верхній лівий кут */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            padding: 40px;
+            transform: translate(-50%, -50%) scale(1);
+            max-width: 450px;
+            width: 100%;
+        }
+    }
+
+    @media screen and (min-width: $desktop-breakpoint) {
+        & {
+            max-width: 528px;
+            width: 100%;
+        }
+    }
 }
 
 .modal-window__close-icon {
@@ -55,13 +70,16 @@
 }
 
 .modal-window__close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
     width: 30px;
     height: 30px;
     display: flex;
     align-items: center;
-    margin-top: 8px;
-    margin-right: 8px;
-    margin-left: auto;
+    // margin-top: 8px;
+    // margin-right: 8px;
+    // margin-left: auto;
     background-color: $global-white-color;
     cursor: pointer;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -69,19 +87,19 @@
 }
 
 .modal-window__title {
-    width: 448px;
+    min-width: 370px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 12px;
     font-size: 20px;
-    line-height: calc(23 / 20);
+    line-height: calc(30 / 20);
     text-align: center;
     color: $global-blackgray-color;
 }
 
 .modal-window-form {
-    width: 448px;
+    // width: 448px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -168,9 +186,16 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
-    font-size: 14px;
-    line-height: calc(24 / 14);
+    font-size: 12px;
+    line-height: calc(14 / 12);
     color: $global-lightblack-color;
+    
+    @media screen and (min-width: $desktop-breakpoint) {
+        & {
+            font-size: 14px;
+            line-height: calc(24 / 14);
+        }
+    }
 }
 
 .modal-window-form__check-icon {
@@ -205,7 +230,6 @@
     line-height: calc(30 / 16);
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 40px;
     display: flex;
     align-items: center;
     text-align: center;
