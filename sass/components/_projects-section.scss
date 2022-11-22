@@ -16,15 +16,10 @@
     }
 }
 
-// .projects-filter__list .projects-filter__item+.projects-filter__item {
-//     margin-left: 8px;
-// }
-
 .projects-filter__button {
-    flex-basis: calc(100% / 3 - 8px);
     background: $global-lightgray-color;
     padding: 6px 22px;
-    font-family: "Roboto", sans-serif;
+    font-family: $body-font-family-roboto;
     font-style: normal;
     font-size: 16px;
     font-weight: 500;
@@ -51,25 +46,46 @@
 }
 
 .projects__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: space-between;
+    @media screen and (min-width: $tablet-breakpoint) {
+        & {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+    }
 }
 
 .projects__item {
-    flex-basis: 100%;
-    
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
     @media screen and (min-width: $tablet-breakpoint) {
         & {
-            flex-basis: calc(100% / 2 - 30px);
+            height: 100%;
+            width: 354px;
+        }
+
+        &:first-child .projects__type {
+            margin-bottom: 35px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 0;
         }
     }
+
     @media screen and (min-width: $desktop-breakpoint) {
         & {
-            flex-basis: calc(100% / 3 - 30px);
+            width: 370px;
+            margin: 0;
         }
-}
+
+        &:first-child .projects__type {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .projects__link {
@@ -130,6 +146,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 77px 24px;
     /* css перехід */
     transform: translateY(100%);
     transition-property: transform;
@@ -146,7 +163,6 @@
 }
 
 .projects__description-text {
-    width: 322px;
     font-size: 18px;
     line-height: calc(28 / 18);
     color: $global-white-color;
@@ -164,7 +180,7 @@
     margin-bottom: 4px;
     font-style: normal;
     font-size: 18px;
-    line-height: 2;
+    line-height: calc(36 / 18);
     letter-spacing: 0.06em;
     color: $global-blackgray-color;
 }
@@ -172,6 +188,6 @@
 .projects__type {
     font-style: normal;
     font-size: 16px;
-    line-height: 1.875;
+    line-height: calc(30 / 16);
     color: $global-lightblack-color;
 }
