@@ -13,6 +13,13 @@
     width: 100%;
     background-color: $global-white-color;
     border-bottom: 1px solid $header-border-color;
+    z-index: 28;
+
+    @media screen and (min-width: $tablet-breakpoint) {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
 }
 
 .header {
@@ -62,7 +69,6 @@
 }
 
 .mobile-menu-button {
-    outline: 1px solid blueviolet;
     width: 40px;
     height: 40px;
     display: flex;
@@ -86,6 +92,7 @@
 }
 
 .mobile-menu-button.is-open {
+    padding: 5px;
     .close-icon {
         display: block;
     }

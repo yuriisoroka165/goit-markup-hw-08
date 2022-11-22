@@ -7,6 +7,7 @@
         & {
             display: flex;
             flex-wrap: wrap;
+            gap: 30px;
         }
     }
     @media screen and (min-width: $desktop-breakpoint) {
@@ -16,31 +17,28 @@
     }
 }
 
-.features__list .features__item+.features__item {
-    @media screen and (min-width: $desktop-breakpoint) {
-            & {
-                margin-left: 30px;
-            }
-        }
-}
+// .features__list .features__item+.features__item {
+//     @media screen and (min-width: $desktop-breakpoint) {
+//             & {
+//                 margin-left: 30px;
+//             }
+//         }
+// }
 
 .features__item {
-    @media screen and (max-width: $mobile-breakpoint) {
-            & {
-                margin-bottom: 30px;
-            }
+        &:not(:last-child) {
+            margin-bottom: 30px;
         }
+
     @media screen and (min-width: $tablet-breakpoint) {
             & {
                 flex-basis: calc((100% - 30px) / 2);
             }
-            &:first-child {
-                margin-bottom: 30px;
-            }
-            &:nth-child(2n) {
-                margin-left: 30px;
+            &:not(:last-child) {
+                margin-bottom: 0;
             }
         }
+
     @media screen and (min-width: $desktop-breakpoint) {
             & {
                 flex-basis: calc((100% - 30px) / 4);
@@ -68,7 +66,7 @@
     margin-bottom: 10px;
     font-style: normal;
     font-size: 14px;
-    line-height: 1.1428;
+    line-height: calc(16 / 14);
     text-transform: uppercase;
     
     @media (min-width: $tablet-breakpoint) {

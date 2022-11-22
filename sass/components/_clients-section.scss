@@ -8,7 +8,7 @@
 
 .clients__list {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 30px;
     
@@ -18,12 +18,15 @@
             }
         }
 }
+
 .clients__item {
-    flex-basis: calc(100% / 2 - 30px);
+    width: 210px;
+    // flex-basis: calc(100% / 2 - 30px);
 
     @media screen and (min-width: $tablet-breakpoint) {
         & {
-            flex-basis: calc(100% / 3 - 30px);
+            width: 226px;
+            // flex-basis: calc(100% / 3 - 30px);
         }
     }
 }

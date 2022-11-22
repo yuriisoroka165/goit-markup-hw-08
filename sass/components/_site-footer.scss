@@ -17,7 +17,9 @@
     @media screen and (min-width: $tablet-breakpoint) {
         & {
             display: flex;
+            align-items: baseline;
             justify-content: space-around;
+            margin-bottom: 60px;
         }
     }
 }
@@ -36,7 +38,7 @@
 }
 
 .footer-contacts__list {
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
     text-align: center;
     li:not(:last-child) {
         margin-bottom: 12px;
@@ -92,7 +94,7 @@
 }
 
 .footer-social-container {
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
     @media screen and (min-width: $desktop-breakpoint) {
         & {
             margin-left: 70px;

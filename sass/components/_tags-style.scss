@@ -3,11 +3,16 @@ html {
 }
 
 body {
-    // padding-top: 80px;
     font-family: $body-font-family-roboto;
     font-size: $body-font-size;
     letter-spacing: $body-letter-spacing;
     color: $global-blackgray-color;
+
+    @media screen and (min-width: $tablet-breakpoint) {
+        & {
+            padding-top: 80px;
+        }
+    }
 
     &.modal-open {
         overflow: hidden;
