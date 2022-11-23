@@ -1016,7 +1016,7 @@ img {
   -moz-column-gap: 8px;
        column-gap: 8px;
   row-gap: 15px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .projects-filter__list {
@@ -1133,7 +1133,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 77px 24px;
+  padding: 77px 27px;
   /* css перехід */
   transform: translateY(100%);
   transition-property: transform;
@@ -1186,6 +1186,7 @@ img {
   .footer-container {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
   }
 }
 
