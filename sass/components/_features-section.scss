@@ -17,14 +17,6 @@
     }
 }
 
-// .features__list .features__item+.features__item {
-//     @media screen and (min-width: $desktop-breakpoint) {
-//             & {
-//                 margin-left: 30px;
-//             }
-//         }
-// }
-
 .features__item {
         &:not(:last-child) {
             margin-bottom: 30px;
